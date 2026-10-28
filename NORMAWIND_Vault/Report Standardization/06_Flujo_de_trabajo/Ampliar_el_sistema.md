@@ -39,3 +39,4 @@ Anotar aquí cada cambio relevante.
 | 2026-10-28 | PPTX layout v2: calcado de KRON002 (banda gris con versalitas, portada y contraportada con foto B/N y misma retícula, tablas y callouts más ligeros, separadores de sección). Vault con capturas en `Adjuntos/` y copia en Notion. `build_report.py` reintenta la exportación de Office si falla |
 | 2026-10-28 | PPTX en fuente Abadi Extra Light; foto de portada y contraportada del histórico para todos los informes |
 | 2026-10-28 | PPTX: logo NORMAWIND horizontal girado 90° en el borde derecho de portada/contraportada (sustituye a la barra taupe; layout tomado del T02 retocado por el equipo) y logo pequeño en el pie de todas las diapositivas |
+| 2026-10-28 | Repositorio público https://github.com/Solforio/report_standard (skill + vault; sin INFORMES/LOGO/FACSIMILES). La skill usa el vault local primero y, si falta, descarga el repo. Regla: cada cambio se refleja en skill, Obsidian y Notion |

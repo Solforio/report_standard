@@ -7,8 +7,15 @@ description: Genera informes estandarizados de NORMAWIND S.L. (viabilidad y posi
 
 Convierte un contenido técnico en informes con **estructura, estilo e idioma estandarizados**. El conocimiento está en el vault de Obsidian `NORMAWIND_Vault/Report Standardization/` (abrir esa carpeta como vault; está en la raíz del proyecto, dos niveles por encima de `.claude/`; las imágenes están en `Adjuntos/`); el generador está en `scripts/`.
 
-## Si falta el vault en local
-El repositorio público `https://github.com/Solforio/report_standard` contiene la skill y el vault. Si `NORMAWIND_Vault/Report Standardization/` no existe en el proyecto, clónalo (`git clone --depth 1 https://github.com/Solforio/report_standard <carpeta-temporal>`) y lee las notas desde ahí; no inventes reglas ni glosario. Las muestras históricas (`INFORMES/`, `05_Muestras_historicas/`) no están en el repositorio por contener datos de clientes.
+## Dónde buscar el conocimiento (orden de prioridad)
+1. **Vault local primero.** Si existe `NORMAWIND_Vault/Report Standardization/` en el proyecto, úsalo siempre como fuente; es la versión más reciente del equipo.
+2. **Si no existe en local**, descarga el repositorio público `https://github.com/Solforio/report_standard` (`git clone --depth 1 https://github.com/Solforio/report_standard <carpeta-temporal>`; sin git, descarga el ZIP de la rama `main`) y usa su `NORMAWIND_Vault/Report Standardization/` como base de información. Dilo al usuario en una línea. No inventes reglas ni glosario si no consigues ninguna de las dos fuentes: avisa y pide el vault.
+3. Las muestras históricas (`INFORMES/`, `05_Muestras_historicas/`) no están en el repositorio por contener datos de clientes; si faltan, trabaja sin ellas.
+
+Las rutas `NORMAWIND_Vault/Report Standardization/...` de este documento se refieren a la carpeta elegida según este orden.
+
+## Mantenimiento: mantener todo sincronizado
+Cada vez que cambie algo (renderers, plantillas, marca, glosario, tipos, formatos, flujo), **actualiza en el mismo trabajo**: (a) esta skill, (b) las notas del vault de Obsidian (con capturas nuevas en `Adjuntos/` si cambia el aspecto), (c) la copia en Notion «Report Standardization» (texto e imágenes), y (d) la tabla de versiones de `06_Flujo_de_trabajo/Ampliar_el_sistema.md`. Si el usuario no lo ha prohibido, deja preparado el commit; el `git push` al repositorio público solo se hace cuando el usuario lo pida, y no se publican `INFORMES/`, `LOGO/`, `FACSIMILES/` ni las muestras históricas (ver `.gitignore`).
 
 ## Flujo obligatorio
 

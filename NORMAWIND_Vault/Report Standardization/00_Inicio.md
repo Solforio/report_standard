@@ -31,6 +31,11 @@ Base de conocimiento para generar informes con **la misma estructura, estilo y c
 |---|---|---|
 | ![[docx_T04_p1.png]] | ![[docx_T04_p3.png]] | ![[docx_T08_carta_p1.png]] |
 
+## Dónde vive y cómo se mantiene
+- Repositorio público: https://github.com/Solforio/report_standard (skill + este vault). Copia espejo en Notion.
+- La skill usa **este vault en local primero**; si no existe, descarga el repositorio y lo usa como base.
+- Cada cambio relevante se refleja a la vez en la skill, en este vault (con capturas en `Adjuntos/`) y en Notion; ver [[Ampliar_el_sistema]].
+
 ## Principios
 1. **Una fuente, varios formatos.** El contenido se escribe una vez; los formatos son vistas del mismo texto, tablas y figuras.
 2. **Evolución, no ruptura.** Se conserva la lógica de los informes históricos (portada → control de revisiones → índice → cuerpo numerado) y se corrigen sus inconsistencias ([[Hallazgos_de_auditoria]]).
