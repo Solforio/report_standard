@@ -1,0 +1,44 @@
+# EXAMPLE with FICTITIOUS data to test templates. Do not reuse figures.
+meta:
+  doc_type: respuesta_requerimiento
+  lang: en
+  example: true
+  title: "Response to the administrative request"
+  short_title: "Response to request"
+  client: "Industria Ejemplo S.A."
+  project: "PE Ejemplo Autoconsumo"
+  code: "EJEM003"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["A. Autor"]
+  place_date: "Barcelona, 28 October 2026"
+  recipient:
+    - "Government department of Example"
+    - "Territorial Services"
+    - "Tarragona"
+  subject: "Response to the sufficiency report on the wind installation PE Ejemplo"
+  reference_lines:
+    - ["File", "FUE-2026-00000000"]
+    - ["Applicant", "Industria Ejemplo S.A."]
+    - ["Installed capacity", "6,200 kW"]
+
+sections:
+  - id: background
+    blocks:
+      - p: "On 12 September 2026 the Territorial Services issued a sufficiency report on the file referenced above, requesting additional documentation."
+  - id: request_summary
+    blocks:
+      - numbered:
+          - "Justify the distance to the nearest road."
+          - "Provide updated environmental documentation."
+  - id: response
+    subsections:
+      - title: "Distance to the road"
+        blocks:
+          - p: "The turbine is located **270 m** from the nearest road, equal to 1.5 times the blade-tip height, as required."
+      - title: "Environmental documentation"
+        blocks:
+          - p: "The updated documentation is attached as Annex 1."
+  - id: conclusions
+    blocks:
+      - p: "We trust that the information provided addresses the points raised and remain at your disposal."

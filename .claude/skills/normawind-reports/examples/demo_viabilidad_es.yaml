@@ -1,0 +1,99 @@
+# EJEMPLO con datos FICTICIOS para probar plantillas. No reutilizar cifras.
+meta:
+  doc_type: posicionamiento_viabilidad
+  lang: es
+  example: true
+  title: "Estudio de viabilidad de energía eólica para autoconsumo"
+  short_title: "Viabilidad eólica autoconsumo"
+  subtitle: "Industria Ejemplo S.A. · Planta de Ejemplo"
+  client: "Industria Ejemplo S.A."
+  project: "PE Ejemplo Autoconsumo"
+  location: "T.M. de Ejemplo (Tarragona)"
+  code: "EJEM001"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["A. Autor", "B. Autora"]
+  validated_by: "C. Revisor"
+  powered_by_emd: true
+
+sections:
+  - id: executive_summary
+    blocks:
+      - kpis:
+          - {label: "Potencia propuesta", value: "6,2", unit: "MW"}
+          - {label: "Producción neta anual", value: "13.070", unit: "MWh/año"}
+          - {label: "Cobertura de la demanda", value: "13,7", unit: "%"}
+          - {label: "LCOE", value: "77,9", unit: "€/MWh"}
+      - p: "Se propone **1 aerogenerador de 6,2 MW** en el emplazamiento 3, con la mejor producción y menor afección a infraestructuras existentes."
+      - callout: {kind: ok, title: "Conclusión:", text: "El proyecto es **técnicamente viable** y económicamente atractivo en los tres escenarios de recurso analizados."}
+  - id: objective
+    blocks:
+      - p: "El objeto de este documento es evaluar la viabilidad técnica, energética y económica de instalar un aerogenerador para autoconsumo en la planta del cliente."
+      - bullets:
+          - "Caracterizar y delimitar restricciones ambientales, urbanísticas y técnicas."
+          - "Proponer un emplazamiento preliminar y estimar la producción."
+          - "Realizar un análisis económico preliminar."
+  - id: methodology
+    blocks:
+      - numbered:
+          - "Mapa de recurso eólico a 100 m con series de largo plazo."
+          - "Balance energético horario frente a la curva de demanda."
+          - "Análisis de flujos de caja a 30 años."
+  - id: site_description
+    blocks:
+      - keyvalue:
+          caption: "Datos generales del emplazamiento"
+          rows: [["Municipio", "Ejemplo (Tarragona)"], ["Coordenadas ETRS89 31N", "X 123456 · Y 4567890"], ["Altitud", "250 m s.n.m."], ["Demanda anual", "95.000 MWh/año"]]
+      - figure: {path: placeholder_mapa.png, caption: "Ámbito de estudio (radio de 5 km)", source: "Elaboración propia", width_cm: 13}
+  - id: site_analysis
+    subsections:
+      - title: "Restricciones técnicas"
+        blocks:
+          - p: "Se han aplicado distancias de seguridad a carreteras, líneas eléctricas y viviendas en función de la altura de punta de pala."
+          - table:
+              caption: "Distancias mínimas consideradas"
+              header: ["Elemento", "Criterio", "Distancia (m)"]
+              rows: [["Carreteras", "1,5 × altura punta de pala", "270"], ["Líneas eléctricas", "1,5 × altura punta de pala", "270"], ["Viviendas aisladas", "500 m (criterio ambiental)", "500"]]
+              source: "Normativa sectorial aplicable"
+      - title: "Condicionantes ambientales"
+        blocks:
+          - callout: {kind: warn, title: "Atención:", text: "Se detecta presencia de rapaces protegidas a 2,1 km; se recomienda campaña de seguimiento de fauna."}
+          - bullets: ["Sin afección directa a Red Natura 2000.", "Zona fuera de áreas inundables T500."]
+  - id: technical_proposal
+    blocks:
+      - p: "Se propone el emplazamiento 3 por su mayor producción y menor afección."
+      - figure: {path: placeholder_foto.png, caption: "Posición propuesta del aerogenerador", width_cm: 14}
+  - id: energy_analysis
+    blocks:
+      - chart:
+          kind: bar
+          labels: [Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]
+          series:
+            - {name: "Eólica", values: [1500, 1200, 1700, 1550, 900, 800, 700, 750, 950, 1250, 1400, 1300]}
+            - {name: "FV existente", values: [400, 600, 1000, 1400, 1700, 1900, 2000, 1800, 1300, 800, 450, 350]}
+          ylabel: "MWh"
+          caption: "Producción mensual media"
+          width_cm: 15
+      - table:
+          caption: "Resultados energéticos (año medio)"
+          header: ["Concepto", "Valor", "Unidad"]
+          rows: [["Producción bruta", "14.200", "MWh/año"], ["Pérdidas", "8", "%"], ["Producción neta", "13.070", "MWh/año"], ["Horas equivalentes", "2.016", "h"]]
+  - id: economic_analysis
+    blocks:
+      - table:
+          caption: "Resumen económico preliminar"
+          header: ["Concepto", "Importe (€)"]
+          rows: [["DevEx", "325.000"], ["CapEx", "9.161.360"], ["OpEx anual", "250.000"], ["Total inversión", "9.486.360"]]
+          total_row: true
+      - chart:
+          kind: line
+          labels: ["0", "5", "10", "15", "20", "25", "30"]
+          series: [{name: "Flujo acumulado", values: [-9.5, -6.1, -1.9, 3.1, 8.4, 13.6, 20.2]}]
+          ylabel: "M€"
+          caption: "Flujo de caja acumulado"
+  - id: conclusions
+    blocks:
+      - bullets: ["Proyecto viable técnica y económicamente.", "Se recomienda una campaña de fauna previa a la solicitud."]
+  - id: next_steps
+    blocks:
+      - numbered: ["Validación de la propuesta técnica por el cliente.", "Visita de campo y revisión de accesos.", "Estudios ambientales y tramitación."]

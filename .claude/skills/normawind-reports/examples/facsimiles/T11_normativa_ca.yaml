@@ -1,0 +1,40 @@
+# EXEMPLE amb dades FICTÍCIES
+meta:
+  doc_type: normativa_urbanismo
+  lang: ca
+  example: true
+  title: "Justificació de la no aplicació del tràmit urbanístic al PE Exemple"
+  short_title: "No aplicació del tràmit urbanístic"
+  subtitle: "Informe normatiu i urbanístic"
+  client: "Energies Exemple S.L."
+  project: "PE Exemple"
+  location: "T.M. de Vilaexemple (Tarragona)"
+  code: "EJEM111"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["A. Autor"]
+  validated_by: "C. Revisor"
+sections:
+  - id: objective
+    blocks:
+      - p: "Justificar que el PE Exemple, constituït per un sol aerogenerador amb finalitat d'autoconsum, es troba en el supòsit de no aplicació del tràmit urbanístic previst al Decret-llei 16/2019."
+  - id: applicable_rules
+    blocks:
+      - bullets:
+          - "**Decret-llei 16/2019**, de 26 de novembre, de mesures urgents per a l'emergència climàtica i l'impuls a les energies renovables, article 6."
+          - "**Decret-llei 24/2021**, de 26 d'octubre, d'acceleració del desplegament de les energies renovables distribuïdes i participades."
+      - callout: {kind: info, text: "Text consolidat consultat el 28/10/2026. Verificar la vigència abans d'utilitzar aquest document."}
+  - id: analysis
+    subsections:
+      - title: "Encaix del projecte en l'àmbit d'aplicació"
+        blocks:
+          - table:
+              caption: "Requisits de la norma i compliment"
+              header: ["Requisit", "Compliment", "Evidència"]
+              rows: [["Potència superior a 500 kW i igual o inferior a 50 MW", "Sí (5 MW)", "Memòria, apartat 3"], ["Un únic punt de connexió", "Sí", "Annex 5"], ["Ubicació en sòl industrial", "Sí", "Pla d'ordenació municipal"]]
+      - title: "Conseqüència urbanística"
+        blocks:
+          - p: "En complir els requisits, el projecte **no requereix** el tràmit urbanístic específic i es tramita directament segons la normativa energètica i ambiental."
+  - id: conclusions
+    blocks:
+      - callout: {kind: ok, title: "Conclusió:", text: "A judici de NORMAWIND, el projecte s'encabeix en el supòsit de no aplicació del tràmit urbanístic. En cas de dubte, es recomana consultar l'administració competent."}

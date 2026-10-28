@@ -1,0 +1,18 @@
+# Datos de clientes y material pesado: NO se publican
+/INFORMES/
+/LOGO/
+/FACSIMILES/
+
+# Notas del vault con nombres de clientes/proyectos y capturas de informes reales
+NORMAWIND_Vault/Report Standardization/05_Muestras_historicas/
+NORMAWIND_Vault/Report Standardization/Adjuntos/referencia_KRON002_*
+
+# Estado local de Obsidian y Claude
+NORMAWIND_Vault/Report Standardization/.obsidian/workspace*.json
+.claude/settings.local.json
+
+# Salidas y temporales
+.claude/skills/normawind-reports/examples/salida_demo/
+__pycache__/
+*.pyc
+~$*

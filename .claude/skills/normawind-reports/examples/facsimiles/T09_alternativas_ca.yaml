@@ -1,0 +1,47 @@
+# EXEMPLE amb dades FICTÍCIES
+meta:
+  doc_type: alternativas_modificaciones
+  lang: ca
+  example: true
+  title: "Informe justificatiu de la proposta de modificació del traçat de la LAT"
+  short_title: "Proposta de modificació LAT"
+  subtitle: "PE Exemple · Nova proposta"
+  client: "Energies Exemple S.L."
+  project: "PE Exemple"
+  location: "T.M. de Vilaexemple (Girona)"
+  code: "EJEM109"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["A. Autor"]
+  validated_by: "C. Revisor"
+sections:
+  - id: background
+    blocks:
+      - table:
+          caption: "Hitos del projecte autoritzat"
+          header: ["Tràmit", "Data", "Estat"]
+          rows: [["DIA favorable", "01/2023", "Obtinguda"], ["Autorització administrativa prèvia", "07/2023", "Obtinguda"], ["Autorització administrativa de construcció", "07/2024", "Obtinguda"]]
+      - p: "El traçat autoritzat és aeri per l'oest de la carretera fins al suport 70, on passa a soterrat fins a la subestació."
+  - id: justification
+    blocks:
+      - p: "Els informes rebuts dels organismes afectats obliguen a modificar el traçat:"
+      - bullets:
+          - "**Carreteres de l'Estat:** informe desfavorable al tram final per afecció a un projecte de variant."
+          - "**Diputació:** la rasa s'ha de situar a un mínim de 3 m de l'aresta exterior de l'esplanació."
+          - "**Ministeri de Transports:** cal consultar l'afecció a la línia ferroviària."
+  - id: proposal
+    blocks:
+      - p: "Es proposa soterrar la línia a partir del suport 61, en paral·lel a la carretera comarcal, i creuar l'autopista engrapada al pont existent."
+      - figure: {path: ../placeholder_trazado.png, caption: "Traçat autoritzat (taupe) i proposat (blau)", width_cm: 13}
+  - id: alternatives
+    blocks:
+      - bullets: ["**Alternativa A:** traçat aeri per l'oest (autoritzat).", "**Alternativa B:** soterrat en paral·lel a la carretera (proposta).", "**Alternativa C:** soterrat per l'est."]
+  - id: comparison
+    blocks:
+      - table:
+          caption: "Comparativa d'alternatives"
+          header: ["Criteri", "A", "B", "C"]
+          rows: [["Afecció ambiental", "Mitjana", "Baixa", "Baixa"], ["Viabilitat tècnica", "Baixa", "Alta", "Mitjana"], ["Compatibilitat amb informes", "No", "Sí", "Parcial"], ["Cost relatiu", "100", "125", "140"], ["Termini", "Llarg", "Mitjà", "Llarg"]]
+  - id: conclusions
+    blocks:
+      - callout: {kind: ok, title: "Recomanació:", text: "S'adopta l'**alternativa B**, que compleix els condicionants dels organismes amb un sobrecost del 25 %."}

@@ -1,0 +1,92 @@
+# Etiquetas fijas, títulos de sección y nombres de tipo de informe. Idiomas: en, es, ca.
+# Para añadir una sección: nuevo id bajo `sections` con las tres traducciones.
+
+labels:
+  contents:        {en: "Contents", es: "Índice", ca: "Índex"}
+  revision_history: {en: "Revision history", es: "Control de revisiones", ca: "Control de revisions"}
+  version:         {en: "Version", es: "Versión", ca: "Versió"}
+  date:            {en: "Date", es: "Fecha", ca: "Data"}
+  changes:         {en: "Changes", es: "Cambios", ca: "Canvis"}
+  authors:         {en: "Author(s)", es: "Autor(es)", ca: "Autor(s)"}
+  validated_by:    {en: "Validated by", es: "Validado por", ca: "Validat per"}
+  document_name:   {en: "Document name", es: "Nombre del documento", ca: "Nom del document"}
+  reference:       {en: "Reference", es: "Referencia", ca: "Referència"}
+  client:          {en: "Client", es: "Cliente", ca: "Client"}
+  project:         {en: "Project", es: "Proyecto", ca: "Projecte"}
+  location:        {en: "Location", es: "Emplazamiento", ca: "Emplaçament"}
+  page:            {en: "Page", es: "Página", ca: "Pàgina"}
+  of:              {en: "of", es: "de", ca: "de"}
+  figure:          {en: "Figure", es: "Figura", ca: "Figura"}
+  table:           {en: "Table", es: "Tabla", ca: "Taula"}
+  source:          {en: "Source", es: "Fuente", ca: "Font"}
+  confidential:    {en: "Confidential. For the addressee only.", es: "Confidencial. Uso exclusivo del destinatario.", ca: "Confidencial. Ús exclusiu del destinatari."}
+  draft:           {en: "DRAFT", es: "BORRADOR", ca: "ESBORRANY"}
+  example:         {en: "EXAMPLE – FICTITIOUS DATA", es: "EJEMPLO – DATOS FICTICIOS", ca: "EXEMPLE – DADES FICTÍCIES"}
+  first_version:   {en: "First version", es: "Primera versión", ca: "Primera versió"}
+  prepared_by:     {en: "Prepared by", es: "Elaborado por", ca: "Elaborat per"}
+  green_energy:    {en: "Green energy consulting", es: "Green energy consulting", ca: "Green energy consulting"}
+  address:         {en: "C/ Llacuna 22, 4-6 · 08005 Barcelona · Tel. +34 93 241 12 75 · www.normawind.com",
+                    es: "C/ Llacuna 22, 4-6 · 08005 Barcelona · Tel. +34 93 241 12 75 · www.normawind.com",
+                    ca: "C/ Llacuna 22, 4-6 · 08005 Barcelona · Tel. +34 93 241 12 75 · www.normawind.com"}
+  thanks:          {en: "Thank you", es: "Gracias", ca: "Gràcies"}
+
+types:
+  posicionamiento_viabilidad: {en: "Preliminary feasibility and turbine siting study", es: "Estudio de viabilidad preliminar y posicionamiento de aerogenerador", ca: "Estudi de viabilitat preliminar i posicionament d'aerogenerador"}
+  energetico_economico:       {en: "Energy and economic analysis", es: "Análisis energético y económico", ca: "Anàlisi energètica i econòmica"}
+  recurso_eolico:             {en: "Wind resource and energy yield assessment", es: "Evaluación del recurso eólico y producción energética", ca: "Avaluació del recurs eòlic i producció energètica"}
+  impacto_acustico:           {en: "Acoustic impact study", es: "Estudio de impacto acústico", ca: "Estudi d'impacte acústic"}
+  sombras_parpadeantes:       {en: "Shadow flicker study", es: "Estudio de sombras parpadeantes", ca: "Estudi d'ombres parpellejants"}
+  estudio_visual:             {en: "Visual impact study", es: "Estudio de impacto visual", ca: "Estudi d'impacte visual"}
+  accesos_transporte:         {en: "Access and transport study", es: "Estudio de accesos y transporte", ca: "Estudi d'accessos i transport"}
+  respuesta_requerimiento:    {en: "Response to administrative request", es: "Respuesta a requerimiento administrativo", ca: "Resposta a requeriment administratiu"}
+  alternativas_modificaciones: {en: "Alternatives and modifications report", es: "Informe de alternativas y modificaciones", ca: "Informe d'alternatives i modificacions"}
+  terrenos_propietarios:      {en: "Land and landowners report", es: "Informe de terrenos y propietarios", ca: "Informe de terrenys i propietaris"}
+  normativa_urbanismo:        {en: "Regulatory and planning report", es: "Informe normativo y urbanístico", ca: "Informe normatiu i urbanístic"}
+
+sections:
+  executive_summary:   {en: "Executive summary", es: "Resumen ejecutivo", ca: "Resum executiu"}
+  introduction:        {en: "Introduction", es: "Introducción", ca: "Introducció"}
+  objective:           {en: "Purpose of the document", es: "Objeto del documento", ca: "Objecte del document"}
+  scope:               {en: "Scope", es: "Alcance", ca: "Abast"}
+  regulatory_framework: {en: "Regulatory framework", es: "Marco normativo", ca: "Marc normatiu"}
+  methodology:         {en: "Methodology", es: "Metodología", ca: "Metodologia"}
+  input_data:          {en: "Input data", es: "Datos de entrada", ca: "Dades d'entrada"}
+  site_description:    {en: "Site description", es: "Descripción del emplazamiento", ca: "Descripció de l'emplaçament"}
+  site_analysis:       {en: "Site analysis and constraints", es: "Análisis del emplazamiento y restricciones", ca: "Anàlisi de l'emplaçament i restriccions"}
+  wind_resource:       {en: "Wind resource", es: "Recurso eólico", ca: "Recurs eòlic"}
+  technical_proposal:  {en: "Technical proposal", es: "Propuesta técnica", ca: "Proposta tècnica"}
+  alternatives:        {en: "Alternatives", es: "Alternativas", ca: "Alternatives"}
+  turbine_description: {en: "Wind turbine description", es: "Descripción del aerogenerador", ca: "Descripció de l'aerogenerador"}
+  energy_analysis:     {en: "Energy analysis", es: "Análisis energético", ca: "Anàlisi energètica"}
+  economic_analysis:   {en: "Economic analysis", es: "Análisis económico", ca: "Anàlisi econòmica"}
+  sensitivity:         {en: "Sensitivity analysis", es: "Análisis de sensibilidad", ca: "Anàlisi de sensibilitat"}
+  urban_planning:      {en: "Urban planning compliance", es: "Adecuación urbanística", ca: "Adequació urbanística"}
+  environmental:       {en: "Environmental constraints", es: "Condicionantes ambientales", ca: "Condicionants ambientals"}
+  results:             {en: "Results", es: "Resultados", ca: "Resultats"}
+  receivers:           {en: "Receptors", es: "Receptores", ca: "Receptors"}
+  model_and_calculation: {en: "Model and calculation", es: "Modelo y cálculo", ca: "Model i càlcul"}
+  impact_assessment:   {en: "Impact assessment", es: "Evaluación del impacto", ca: "Avaluació de l'impacte"}
+  construction_phase:  {en: "Construction phase", es: "Fase de construcción", ca: "Fase de construcció"}
+  mitigation:          {en: "Preventive and corrective measures", es: "Medidas preventivas y correctoras", ca: "Mesures preventives i correctores"}
+  monitoring:          {en: "Monitoring programme", es: "Programa de seguimiento", ca: "Programa de seguiment"}
+  long_term_adjustment: {en: "Long-term adjustment", es: "Ajuste a largo plazo", ca: "Ajust a llarg termini"}
+  losses_uncertainty:  {en: "Losses and uncertainty", es: "Pérdidas e incertidumbre", ca: "Pèrdues i incertesa"}
+  viewpoints:          {en: "Viewpoints and photomontages", es: "Puntos de vista y fotomontajes", ca: "Punts de vista i fotomuntatges"}
+  access_route:        {en: "Planned access route", es: "Ruta de acceso prevista", ca: "Ruta d'accés prevista"}
+  affected_roads:      {en: "Affected roads and public ways", es: "Carreteras y vías públicas afectadas", ca: "Carreteres i vies públiques afectades"}
+  points_of_interest:  {en: "Points of interest and planned works", es: "Puntos de interés y actuaciones previstas", ca: "Punts d'interès i actuacions previstes"}
+  access_feasibility:  {en: "Access feasibility", es: "Viabilidad del acceso", ca: "Viabilitat de l'accés"}
+  background:          {en: "Background", es: "Antecedentes", ca: "Antecedents"}
+  request_summary:     {en: "Summary of the request", es: "Resumen del requerimiento", ca: "Resum del requeriment"}
+  response:            {en: "Response", es: "Respuesta", ca: "Resposta"}
+  proposal:            {en: "Proposal", es: "Propuesta", ca: "Proposta"}
+  justification:       {en: "Justification", es: "Justificación", ca: "Justificació"}
+  comparison:          {en: "Comparison", es: "Comparativa", ca: "Comparativa"}
+  parcel_register:     {en: "Parcel and landowner register", es: "Relación de parcelas y propietarios", ca: "Relació de parcel·les i propietaris"}
+  status_negotiation:  {en: "Status and negotiation", es: "Estado y negociación", ca: "Estat i negociació"}
+  applicable_rules:    {en: "Applicable regulations", es: "Normativa aplicable", ca: "Normativa aplicable"}
+  analysis:            {en: "Analysis", es: "Análisis", ca: "Anàlisi"}
+  conclusions:         {en: "Conclusions", es: "Conclusiones", ca: "Conclusions"}
+  recommendations:     {en: "Recommendations", es: "Recomendaciones", ca: "Recomanacions"}
+  next_steps:          {en: "Next steps", es: "Próximos pasos", ca: "Propers passos"}
+  annexes:             {en: "Annexes", es: "Anexos", ca: "Annexos"}

@@ -1,0 +1,52 @@
+# EXEMPLE amb dades FICTÍCIES
+meta:
+  doc_type: estudio_visual
+  lang: ca
+  example: true
+  title: "Estudi de visuals del parc eòlic Exemple"
+  short_title: "Estudi de visuals PE Exemple"
+  subtitle: "Annex 11 · T.M. de Vilaexemple"
+  client: "Energies Exemple S.L."
+  project: "El Molí d'Exemple 5 MW"
+  location: "T.M. de Vilaexemple (Tarragona)"
+  code: "EJEM106"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["M.B.", "M.A."]
+  validated_by: "V.C."
+sections:
+  - id: objective
+    blocks:
+      - p: "Aquest annex mostra, mitjançant fotografies i fotomuntatges, l'aspecte de l'aerogenerador des de punts de vista representatius de l'entorn."
+  - id: site_description
+    blocks:
+      - keyvalue:
+          caption: "Informació de la càmera"
+          rows: [["Model de la càmera", "Càmera rèflex 24 MP"], ["Distància focal", "50 mm"], ["Data de les fotografies", "10/02/2026"], ["Programari", "WindPRO 4.1 (mòdul Visual)"]]
+      - figure: {path: ../placeholder_mapa.png, caption: "Situació dels punts de vista", width_cm: 12}
+  - id: viewpoints
+    subsections:
+      - title: "PV01 · Camps de Calafat"
+        blocks:
+          - keyvalue:
+              rows: [["Coordenades (X; Y)", "312.356; 4.533.439"], ["Distància a l'aerogenerador", "0,76 km"], ["Direcció de la càmera", "NW"], ["Data i hora", "10/02/26, 13:52"]]
+          - figure: {path: ../placeholder_vista_existente.png, caption: "PV01 · Vista existent", width_cm: 12}
+          - figure: {path: ../placeholder_fotomontaje.png, caption: "PV01 · Fotomuntatge", width_cm: 12}
+      - title: "PV02 · Masia de Ponç"
+        blocks:
+          - keyvalue:
+              rows: [["Coordenades (X; Y)", "312.324; 4.533.061"], ["Distància a l'aerogenerador", "1,12 km"], ["Direcció de la càmera", "N"], ["Data i hora", "10/02/26, 14:20"]]
+          - figure: {path: ../placeholder_vista_existente.png, caption: "PV02 · Vista existent", width_cm: 12}
+          - figure: {path: ../placeholder_fotomontaje.png, caption: "PV02 · Fotomuntatge", width_cm: 12}
+      - title: "Avís sobre els fotomuntatges"
+        blocks:
+          - callout: {kind: info, text: "Una visualització no pot mostrar amb un 100 % d'exactitud com serà l'aerogenerador en la realitat a causa de factors com les condicions de llum, la meteorologia i les estacions, així com la resolució de la imatge. Una imatge estàtica no pot transmetre el moviment de la turbina."}
+  - id: impact_assessment
+    blocks:
+      - table:
+          caption: "Resum de visibilitat"
+          header: ["Punt de vista", "Distància (km)", "Visibilitat", "Valoració"]
+          rows: [["PV01", "0,76", "Alta", "Notable"], ["PV02", "1,12", "Mitjana", "Moderada"]]
+  - id: conclusions
+    blocks:
+      - bullets: ["L'aerogenerador és visible des dels punts propers, amb afecció moderada.", "No es preveuen afeccions als nuclis urbans."]

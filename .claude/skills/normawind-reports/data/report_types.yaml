@@ -1,0 +1,60 @@
+# Tipos de informe NORMAWIND: estructura estándar de secciones y formatos recomendados.
+# `primary`: formato principal recomendado. `formats`: los que tienen sentido. `style`: "document" (A4) o "deck" (16:9).
+# `sections`: orden estándar; las marcadas con * son obligatorias. Una sección puede omitirse si no aplica.
+# Antecedentes históricos en el vault: NORMAWIND_Vault/Report Standardization/02_Tipos_de_informe/.
+
+posicionamiento_viabilidad:
+  primary: pptx
+  formats: [pptx, pdf, docx, html]
+  style: deck
+  sections: [executive_summary*, objective*, scope, regulatory_framework, methodology, site_description*, site_analysis*, wind_resource, technical_proposal*, alternatives, energy_analysis, economic_analysis, conclusions*, next_steps*, annexes]
+energetico_economico:
+  primary: pptx
+  formats: [pptx, pdf, docx, html]
+  style: deck
+  sections: [executive_summary*, objective*, input_data*, turbine_description, wind_resource, energy_analysis*, economic_analysis*, sensitivity*, conclusions*, next_steps, annexes]
+recurso_eolico:
+  primary: pdf
+  formats: [pdf, docx]
+  style: document
+  sections: [executive_summary*, objective*, input_data*, wind_resource*, long_term_adjustment, turbine_description, energy_analysis*, losses_uncertainty*, results*, conclusions*, annexes]
+impacto_acustico:
+  primary: docx
+  formats: [docx, pdf]
+  style: document
+  sections: [introduction*, objective*, regulatory_framework*, site_description*, receivers*, model_and_calculation*, results*, impact_assessment*, construction_phase, mitigation, monitoring, conclusions*, annexes]
+sombras_parpadeantes:
+  primary: docx
+  formats: [docx, pdf, html]
+  style: document
+  sections: [objective*, regulatory_framework*, site_description*, wind_resource, input_data*, receivers*, methodology*, results*, impact_assessment*, conclusions*, mitigation, monitoring, annexes]
+estudio_visual:
+  primary: pdf
+  formats: [pdf, docx, html]
+  style: document
+  sections: [objective*, site_description*, viewpoints*, impact_assessment, conclusions*, annexes]
+accesos_transporte:
+  primary: docx
+  formats: [docx, pdf]
+  style: document
+  sections: [objective*, regulatory_framework*, access_route*, affected_roads*, points_of_interest*, access_feasibility*, conclusions*, annexes]
+respuesta_requerimiento:
+  primary: docx
+  formats: [docx, pdf]
+  style: letter
+  sections: [background*, request_summary*, response*, conclusions, annexes]
+alternativas_modificaciones:
+  primary: docx
+  formats: [docx, pdf, pptx]
+  style: document
+  sections: [background*, proposal*, alternatives, comparison*, justification*, conclusions*, annexes]
+terrenos_propietarios:
+  primary: docx
+  formats: [docx, pdf]
+  style: document
+  sections: [objective*, parcel_register*, status_negotiation*, next_steps, annexes]
+normativa_urbanismo:
+  primary: docx
+  formats: [docx, pdf, pptx]
+  style: document
+  sections: [objective*, applicable_rules*, analysis*, conclusions*, annexes]

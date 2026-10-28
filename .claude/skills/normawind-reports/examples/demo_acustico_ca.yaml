@@ -1,0 +1,65 @@
+# EXEMPLE amb dades FICTÍCIES per provar plantilles. No reutilitzar xifres.
+meta:
+  doc_type: impacto_acustico
+  lang: ca
+  example: true
+  title: "Estudi d'impacte acústic del parc eòlic Exemple"
+  short_title: "Impacte acústic PE Exemple"
+  subtitle: "Aerogenerador per autoconsum · T.M. d'Exemple"
+  client: "Indústria Exemple S.A."
+  project: "PE Exemple Autoconsum"
+  location: "T.M. d'Exemple (Tarragona)"
+  code: "EJEM002"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["A. Autor"]
+  validated_by: "C. Revisor"
+
+sections:
+  - id: introduction
+    blocks:
+      - p: "Aquest estudi avalua l'impacte acústic de l'aerogenerador projectat sobre els receptors sensibles més propers, d'acord amb la normativa vigent a Catalunya."
+  - id: objective
+    blocks:
+      - bullets:
+          - "Determinar els nivells d'immissió sonora en els receptors."
+          - "Comparar-los amb els valors límit de la zona de sensibilitat acústica."
+  - id: regulatory_framework
+    blocks:
+      - bullets:
+          - "Llei 16/2002, de protecció contra la contaminació acústica."
+          - "Decret 176/2009, que desplega la Llei 16/2002."
+          - "ISO 9613-2: atenuació del so durant la propagació a l'aire lliure."
+      - table:
+          caption: "Valors límit d'immissió (dB(A))"
+          header: ["Zona de sensibilitat", "Ld (dia)", "Le (vespre)", "Ln (nit)"]
+          rows: [["Alta (A)", "60", "60", "50"], ["Moderada (B)", "65", "65", "55"], ["Baixa (C)", "70", "70", "60"]]
+          source: "Exemple: verificar amb la normativa vigent"
+  - id: site_description
+    blocks:
+      - figure: {path: placeholder_mapa.png, caption: "Situació de l'aerogenerador i dels receptors", source: "Elaboració pròpia", width_cm: 13}
+  - id: receivers
+    blocks:
+      - table:
+          caption: "Receptors considerats"
+          header: ["Receptor", "Tipus", "Distància (m)", "Zona"]
+          rows: [["R1", "Habitatge aïllat", "620", "B"], ["R2", "Habitatge aïllat", "810", "B"], ["R3", "Nucli urbà", "1.450", "A"]]
+  - id: model_and_calculation
+    blocks:
+      - p: "El càlcul s'ha realitzat amb el mòdul DECIBEL de WindPRO segons la norma **ISO 9613-2**, amb una altura de receptor de 4 m."
+      - keyvalue:
+          rows: [["Aerogenerador", "Vestas V172-7.2 MW"], ["Alçada de boixa", "114 m"], ["Potència acústica màxima", "106,0 dB(A)"]]
+  - id: results
+    blocks:
+      - table:
+          caption: "Nivells d'immissió calculats"
+          header: ["Receptor", "Nivell calculat dB(A)", "Límit nit dB(A)", "Compleix"]
+          rows: [["R1", "38,2", "55", "Sí"], ["R2", "35,9", "55", "Sí"], ["R3", "29,4", "50", "Sí"]]
+  - id: impact_assessment
+    blocks:
+      - callout: {kind: ok, title: "Valoració:", text: "Els nivells calculats són inferiors als límits en tots els receptors, amb marge mínim de 11,8 dB(A)."}
+  - id: conclusions
+    blocks:
+      - numbered:
+          - "L'impacte acústic de l'aerogenerador és **compatible** amb els valors límit."
+          - "No són necessàries mesures correctores específiques en fase d'explotació."

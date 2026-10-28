@@ -1,0 +1,50 @@
+# EJEMPLO con datos FICTICIOS (nombres y teléfonos inventados)
+meta:
+  doc_type: terrenos_propietarios
+  lang: es
+  example: true
+  confidential: true
+  title: "Informe de terrenos y propietarios del PE Ejemplo"
+  short_title: "Terrenos y propietarios PE Ejemplo"
+  subtitle: "Documento interno · no distribuir"
+  client: "Energías Ejemplo S.L."
+  project: "PE Ejemplo"
+  location: "T.M. de Villaejemplo (Girona)"
+  code: "EJEM110"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["A. Autor"]
+  validated_by: "C. Revisor"
+sections:
+  - id: objective
+    blocks:
+      - p: "Registrar las fincas y los propietarios afectados por cada aerogenerador y el estado de la negociación."
+      - callout: {kind: warn, title: "Datos personales:", text: "Este documento contiene datos personales ficticios. En un informe real, uso interno exclusivo (RGPD)."}
+  - id: parcel_register
+    subsections:
+      - title: "Aerogenerador G1"
+        blocks:
+          - keyvalue:
+              rows: [["Propietario", "Agrícola Ejemplo, S.A."], ["Finca", "Polígono 5, parcela 170"], ["Contacto", "J. Ejemplo · 600 000 001"], ["Tipo de afección", "Cimentación y plataforma"], ["Estado", "Contactado / negociando"], ["Ofertado", "9.920 €/año"], ["Comentarios", "Solicita dos aerogeneradores en lugar de uno."]]
+      - title: "Aerogenerador G2"
+        blocks:
+          - keyvalue:
+              rows: [["Propietario", "M. Ejemplo Prats"], ["Finca", "Polígono 5, parcela 188"], ["Contacto", "M. Ejemplo · 600 000 002"], ["Tipo de afección", "Plataforma y camino"], ["Estado", "Acuerdo"], ["Ofertado", "7.400 €/año"], ["Comentarios", "Firma prevista en noviembre."]]
+  - id: status_negotiation
+    blocks:
+      - table:
+          caption: "Resumen por estado"
+          header: ["Estado", "Fincas", "%"]
+          rows: [["Acuerdo", "3", "37,5"], ["Contactado / negociando", "4", "50,0"], ["Sin contactar", "1", "12,5"], ["Total", "8", "100"]]
+          total_row: true
+      - chart:
+          kind: pie
+          labels: ["Acuerdo", "Negociando", "Sin contactar"]
+          series: [{name: "Fincas", values: [3, 4, 1]}]
+          caption: "Estado de las fincas"
+          w: 5
+          h: 3.4
+          width_cm: 8
+  - id: next_steps
+    blocks:
+      - numbered: ["Cerrar el acuerdo con las fincas en negociación.", "Contactar con la finca pendiente.", "Preparar la versión sin datos personales para la tramitación."]

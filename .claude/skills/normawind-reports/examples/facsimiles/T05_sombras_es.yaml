@@ -1,0 +1,80 @@
+# EJEMPLO con datos FICTICIOS
+meta:
+  doc_type: sombras_parpadeantes
+  lang: es
+  example: true
+  title: "Estudio de sombras parpadeantes del aerogenerador para autoconsumo EJEM05"
+  short_title: "Sombras parpadeantes EJEM05"
+  subtitle: "Centro logístico de Ejemplo · T.M. de Villaejemplo (Toledo)"
+  client: "Logística Ejemplo S.L."
+  project: "Aerogenerador para autoconsumo EJEM05"
+  location: "T.M. de Villaejemplo (Toledo)"
+  code: "EJEM105"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["A. Autor"]
+  validated_by: "C. Revisor"
+  powered_by_emd: true
+sections:
+  - id: objective
+    blocks:
+      - p: "Este informe evalúa el impacto potencial de las sombras parpadeantes proyectadas por **1 aerogenerador Vestas V110-2.2 MW** (altura de buje 80 m) sobre los puestos de trabajo y el interior del centro logístico."
+      - p: "Se han considerado receptores las ventanas del edificio más expuestas, sin tener en cuenta el efecto atenuante del tipo de vidrio ni de protecciones solares (hipótesis conservadora)."
+  - id: regulatory_framework
+    blocks:
+      - p: "No existe legislación española sobre límites de sombras parpadeantes. Se toman como referencia las indicaciones alemanas y otras normativas internacionales."
+      - table:
+          caption: "Umbrales de referencia"
+          header: ["Criterio", "Valor"]
+          rows: [["Máximo anual, caso más desfavorable", "30 h/año"], ["Máximo anual, caso real", "8 h/año"], ["Máximo diario", "30 min/día"]]
+      - callout: {kind: info, text: "La epilepsia fotosensible puede activarse con frecuencias de parpadeo entre 3 y 60 Hz; el rotor proyecta frecuencias muy inferiores."}
+  - id: site_description
+    blocks:
+      - p: "El aerogenerador se ubica en el descampado al oeste del aparcamiento de empleados. En su entorno se encuentran la caseta de control de acceso y el edificio principal."
+      - figure: {path: ../placeholder_mapa.png, caption: "Plano de ubicación del aerogenerador", width_cm: 12}
+  - id: wind_resource
+    blocks:
+      - p: "Predominan los vientos del sector WSW y, en menor medida, del NNE. El resto de sectores son poco frecuentes y menos energéticos."
+  - id: input_data
+    subsections:
+      - title: "Aerogenerador"
+        blocks:
+          - keyvalue:
+              rows: [["Modelo", "Vestas V110-2.2 MW"], ["Altura de buje", "80 m"], ["Diámetro del rotor", "110 m"], ["Coordenadas ETRS89 30N", "X 427109 · Y 4440526"]]
+      - title: "Horas de sol por mes"
+        blocks:
+          - chart:
+              kind: bar
+              labels: [Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic]
+              series: [{name: "Horas de sol", values: [175, 180, 230, 260, 305, 335, 370, 345, 270, 225, 180, 165]}]
+              ylabel: "h"
+              caption: "Horas de sol medias mensuales"
+  - id: receivers
+    blocks:
+      - table:
+          caption: "Receptores potenciales de sombras"
+          header: ["Receptor", "Altura (m)", "Anchura (m)", "Orientación", "Cota (m)"]
+          rows: [["A1", "15", "0,9", "Oeste (84°)", "17,7"], ["A2", "15", "0,9", "Oeste (84°)", "13,2"], ["D1", "4,7", "0,9", "Oeste (84°)", "17,7"], ["Caseta", "1", "2,5", "360°", "1,1"]]
+  - id: methodology
+    blocks:
+      - p: "Se ha utilizado el módulo SHADOW de WindPRO 4.0, que simula la posición del sol respecto al disco del rotor en pasos de 1 minuto durante un año."
+      - bullets: ["**Caso más desfavorable:** rotor orientado al sol, cielo despejado y funcionamiento continuo.", "**Caso real:** aplica probabilidades de horas de sol y de operación.", "**Sombras efectivas:** aplica además el horario laboral por turno."]
+  - id: results
+    blocks:
+      - figure: {path: ../placeholder_sombras.png, caption: "Mapa de sombras proyectadas (caso real)", width_cm: 13}
+      - table:
+          caption: "Horas de sombra por receptor"
+          header: ["Receptor", "Desfavorable (h/año)", "Real (h/año)", "Máx. (min/día)", "Supera 8 h/año"]
+          rows: [["A1", "41,2", "9,6", "28", "Sí"], ["A2", "35,8", "8,4", "26", "Sí"], ["D1", "12,3", "2,9", "17", "No"], ["Caseta", "5,1", "1,2", "11", "No"]]
+  - id: impact_assessment
+    blocks:
+      - p: "Dos receptores superan el umbral de 8 h/año en el caso real. Existen factores que reducen la percepción: alta iluminación interior, distancia de 8–10 m entre la ventana y el puesto, obstáculos y orientación del trabajador."
+  - id: conclusions
+    blocks:
+      - callout: {kind: warn, title: "Conclusión:", text: "Los receptores A1 y A2 superan el umbral de referencia; se recomiendan medidas pasivas sobre esas ventanas."}
+  - id: mitigation
+    blocks:
+      - bullets: ["**Pasivas (ventanas):** vinilos o láminas, cortinas o estores.", "**Activas:** reubicación de puestos o parada programada del aerogenerador en las horas críticas."]
+  - id: monitoring
+    blocks:
+      - p: "Tras la puesta en marcha se verificarán las quejas y las horas reales de sombra durante el primer año de operación."

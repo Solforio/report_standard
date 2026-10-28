@@ -1,0 +1,91 @@
+# EXEMPLE amb dades FICTÍCIES
+meta:
+  doc_type: energetico_economico
+  lang: ca
+  example: true
+  title: "Anàlisi energètica i econòmica d'un aerogenerador per a autoconsum"
+  short_title: "Anàlisi energètica i econòmica"
+  subtitle: "Indústria Exemple S.A. · Planta de Vilaexemple"
+  client: "Indústria Exemple S.A."
+  project: "PE Vilaexemple Autoconsum"
+  location: "T.M. de Vilaexemple (Girona)"
+  code: "EJEM102"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["A. Autor", "B. Autora"]
+  validated_by: "C. Revisor"
+sections:
+  - id: executive_summary
+    blocks:
+      - kpis:
+          - {label: "Potència", value: "6,2", unit: "MW"}
+          - {label: "Producció neta", value: "13.070", unit: "MWh/any"}
+          - {label: "TIR", value: "8,8", unit: "%"}
+          - {label: "Payback", value: "9,9", unit: "anys"}
+      - callout: {kind: ok, title: "Conclusió:", text: "El projecte és **econòmicament viable** en els tres escenaris de vent analitzats."}
+  - id: objective
+    blocks:
+      - p: "Quantificar la producció, l'ús de l'energia (autoconsum i excedents) i la rendibilitat preliminar de l'aerogenerador proposat."
+  - id: input_data
+    blocks:
+      - keyvalue:
+          caption: "Hipòtesis de l'anàlisi"
+          rows: [["Horitzó temporal", "30 anys"], ["Taxa de descompte", "3,50 %"], ["Inflació", "1,00 %"], ["Preu de l'energia autoconsumida (PPA)", "74,45 €/MWh"], ["Pèrdues considerades", "8 %"]]
+  - id: turbine_description
+    blocks:
+      - table:
+          caption: "Característiques de l'aerogenerador"
+          header: ["Fabricant", "Model", "Potència (MW)", "Rotor (m)", "Altura de boixa (m)"]
+          rows: [["Vestas", "V172-7.2", "7,2", "172", "114"]]
+  - id: energy_analysis
+    blocks:
+      - chart:
+          kind: bar
+          labels: [Gen, Feb, Mar, Abr, Mai, Jun, Jul, Ago, Set, Oct, Nov, Des]
+          series:
+            - {name: "Eòlica", values: [1500, 1200, 1700, 1550, 900, 800, 700, 750, 950, 1250, 1400, 1300]}
+            - {name: "FV existent", values: [400, 600, 1000, 1400, 1700, 1900, 2000, 1800, 1300, 800, 450, 350]}
+          ylabel: "MWh"
+          caption: "Producció mensual mitjana"
+      - table:
+          caption: "Resultats energètics (any mitjà)"
+          header: ["Concepte", "Valor", "Unitat"]
+          rows: [["Producció bruta", "14.200", "MWh/any"], ["Producció neta", "13.070", "MWh/any"], ["Hores equivalents", "2.016", "h"], ["Autoconsum directe", "11.381", "MWh/any"], ["Excedents", "1.341", "MWh/any"]]
+      - chart:
+          kind: pie
+          labels: ["FV existent", "Eòlica nova", "Xarxa"]
+          series: [{name: "Cobertura", values: [19.2, 13.7, 67.1]}]
+          caption: "Cobertura de la demanda (%)"
+          w: 5
+          h: 3.4
+          width_cm: 8
+  - id: economic_analysis
+    blocks:
+      - table:
+          caption: "Pressupost i costos"
+          header: ["Concepte", "Import (€)"]
+          rows: [["DevEx", "325.000"], ["CapEx", "9.161.360"], ["OpEx anual", "250.000"], ["Desmantellament", "155.000"], ["Inversió total (DevEx + CapEx)", "9.486.360"]]
+          total_row: true
+      - table:
+          caption: "Indicadors per escenari de vent"
+          header: ["Escenari", "TIR (%)", "VAN (M€)", "Payback (anys)", "LCOE (€/MWh)"]
+          rows: [["Mitjà", "8,8", "4,9", "9,9", "77,9"], ["Màxim", "10,1", "6,6", "8,9", "69,9"], ["Mínim", "8,7", "4,8", "10,6", "82,8"]]
+      - chart:
+          kind: line
+          labels: ["0", "5", "10", "15", "20", "25", "30"]
+          series: [{name: "Flux acumulat", values: [-9.5, -6.1, -1.9, 3.1, 8.4, 13.6, 20.2]}]
+          ylabel: "M€"
+          caption: "Flux de caixa acumulat (escenari mitjà)"
+  - id: sensitivity
+    blocks:
+      - p: "Es representa la variació de la TIR davant de canvis de ±10 % en les variables principals."
+      - table:
+          caption: "Sensibilitat de la TIR (%)"
+          header: ["Variable", "−10 %", "Base", "+10 %"]
+          rows: [["Cost d'inversió", "10,0", "8,8", "7,8"], ["Cost d'operació", "9,1", "8,8", "8,5"], ["Preu de l'energia", "7,6", "8,8", "9,9"], ["Producció", "7,7", "8,8", "9,8"]]
+  - id: conclusions
+    blocks:
+      - bullets: ["La rendibilitat és robusta davant les variacions analitzades.", "La variable més sensible és el preu de l'energia, seguida de la producció."]
+  - id: next_steps
+    blocks:
+      - numbered: ["Confirmar el preu PPA amb el client.", "Campanya de mesura de vent.", "Iniciar l'estudi d'impacte ambiental."]

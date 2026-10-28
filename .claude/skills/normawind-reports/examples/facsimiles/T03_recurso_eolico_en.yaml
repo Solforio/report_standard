@@ -1,0 +1,74 @@
+# EXAMPLE with FICTITIOUS data
+meta:
+  doc_type: recurso_eolico
+  lang: en
+  example: true
+  title: "Energy yield assessment – EJEM03 Wind Farm"
+  short_title: "Energy yield assessment EJEM03"
+  subtitle: "Site assessment"
+  client: "Example Logistics Ltd"
+  project: "EJEM03 Wind Turbine"
+  location: "Example Industrial Estate (Toledo)"
+  code: "03-099-26"
+  date: "2026-10-28"
+  version: "V1"
+  authors: ["A. Author"]
+  validated_by: "C. Reviewer"
+  powered_by_emd: true
+sections:
+  - id: executive_summary
+    blocks:
+      - p: "This report presents the energy assessment and site verification for the EJEM03 wind turbine, performed by NORMAWIND."
+      - kpis:
+          - {label: "Net AEP (P50)", value: "4,081", unit: "MWh/year"}
+          - {label: "Equivalent hours", value: "1,855", unit: "h"}
+          - {label: "Mean wind speed", value: "5.4", unit: "m/s"}
+          - {label: "P90 (20 years)", value: "3,761", unit: "MWh/year"}
+      - table:
+          caption: "Wind turbine layout (ETRS89, zone 30)"
+          header: ["WTG", "X (East)", "Y (North)", "Turbine", "Hub (m)", "Rotor (m)", "Power (kW)"]
+          rows: [["1", "427,109", "4,440,526", "Vestas V110-2.2 MW", "80", "110", "2,200"]]
+  - id: objective
+    blocks:
+      - bullets: ["Energy assessment.", "Loss and uncertainty analysis.", "Site assessment of the layout provided by the client."]
+      - p: "Calculations use WAsP 12 and WAsP Engineering 4.0, with WindPRO 4.1 as graphical interface."
+  - id: input_data
+    blocks:
+      - keyvalue:
+          caption: "Measurement campaign"
+          rows: [["Instrument", "Profiling LIDAR, 80 m"], ["Period", "18 months"], ["Data recovery", "96.4 %"], ["Long-term reference", "EMD-WRF ERA5 (20 years)"]]
+  - id: wind_resource
+    blocks:
+      - chart:
+          kind: bar
+          labels: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+          series: [{name: "Mean wind speed (m/s)", values: [6.1, 6.0, 5.9, 5.5, 5.0, 4.7, 4.6, 4.6, 4.9, 5.3, 5.8, 6.2]}]
+          ylabel: "m/s"
+          caption: "Monthly mean wind speed at hub height"
+  - id: long_term_adjustment
+    blocks:
+      - p: "The long-term adjustment used the **Scaling Local** method with a 20-year EMD-WRF ERA5 series. The mean sector correlation coefficient between the reference and the measured data is 0.76."
+  - id: energy_analysis
+    blocks:
+      - p: "Wake losses were calculated with the N.O. Jensen model and the effective turbulence with the Frandsen (1999) model."
+      - table:
+          caption: "Expected net AEP (including wake and other losses)"
+          header: ["Layout", "Turbine", "Hub (m)", "Units", "MW", "AEP (MWh/y)", "Hours"]
+          rows: [["A", "V110-2.2 MW", "80.0", "1", "2.2", "4,081", "1,855"]]
+  - id: losses_uncertainty
+    blocks:
+      - table:
+          caption: "Energy losses"
+          header: ["Loss", "Method", "Loss (%)", "Loss (MWh/y)"]
+          rows: [["Turbine availability", "Estimate", "1.5", "64"], ["Grid availability", "Estimate", "1.5", "64"], ["Electrical losses", "Estimate", "1.0", "42"], ["Total", "", "4.0", "169"]]
+          total_row: true
+      - bullets: ["Project lifetime set to 20 years.", "AEP estimate is normally distributed.", "Each uncertainty source is independent."]
+  - id: results
+    blocks:
+      - table:
+          caption: "Probability of exceedance (MWh/year)"
+          header: ["Probability", "1 year", "10 years", "20 years"]
+          rows: [["P50", "4,081", "4,081", "4,081"], ["P75", "3,800", "3,861", "3,864"], ["P90", "3,667", "3,756", "3,761"], ["P95", "3,547", "3,662", "3,669"]]
+  - id: conclusions
+    blocks:
+      - bullets: ["The expected net long-term AEP is **4,081 MWh/year (P50)**.", "The recommended value for financing is P90: 3,761 MWh/year."]

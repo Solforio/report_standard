@@ -1,0 +1,65 @@
+# EJEMPLO con datos FICTICIOS
+meta:
+  doc_type: accesos_transporte
+  lang: es
+  example: true
+  title: "Estudio de accesos para transportes especiales del aerogenerador EJEM07"
+  short_title: "Estudio de accesos EJEM07"
+  subtitle: "Anexo 5 · Polígono de Ejemplo, Villaejemplo"
+  client: "Logística Ejemplo S.L."
+  project: "Aerogenerador para autoconsumo EJEM07"
+  location: "T.M. de Villaejemplo (Toledo)"
+  code: "EJEM107"
+  date: "2026-10-28"
+  version: "V01"
+  authors: ["A. Autor"]
+  validated_by: "C. Revisor"
+sections:
+  - id: objective
+    blocks:
+      - p: "Este documento estudia las actuaciones necesarias para permitir los transportes especiales hasta el emplazamiento del aerogenerador a partir de la red viaria existente."
+  - id: regulatory_framework
+    blocks:
+      - p: "Los requisitos de los transportes especiales proceden de la especificación del fabricante (*Wind farm Roads Requirements*), particularizada para el aerogenerador y el emplazamiento."
+      - bullets:
+          - "Real Decreto 1812/1994, Reglamento General de Carreteras."
+          - "Real Decreto 2822/1998, Reglamento General de Vehículos."
+          - "Norma 3.1 IC, Trazado; Norma 6.1 IC, Secciones de firme."
+          - "Limitaciones de paso de transportes especiales (DGT)."
+  - id: access_route
+    blocks:
+      - p: "El punto de inicio del acceso es la rotonda de la carretera nacional que da acceso al polígono. Desde allí, los transportes siguen por el vial del polígono hasta la parcela."
+      - figure: {path: ../placeholder_ruta.png, caption: "Ruta de acceso prevista y puntos de interés", width_cm: 13}
+  - id: affected_roads
+    blocks:
+      - table:
+          caption: "Accesos y carreteras de enlace"
+          header: ["Acceso", "UTM X", "UTM Y", "Carretera de enlace", "P.K.", "Municipio"]
+          rows: [["A1", "427.050", "4.440.380", "N-401A", "36+200", "Villaejemplo"], ["A2", "427.210", "4.440.560", "Vial del polígono", "-", "Villaejemplo"]]
+      - table:
+          caption: "Vías públicas afectadas"
+          header: ["Denominación", "Titular", "Tipo de afección"]
+          rows: [["N-401A", "Ministerio de Transportes", "Giro en rotonda"], ["Vial del polígono", "Ayuntamiento", "Ocupación temporal"]]
+  - id: points_of_interest
+    subsections:
+      - title: "Punto de interés 1 · Rotonda de acceso"
+        blocks:
+          - p: "El radio de giro de la rotonda es insuficiente para el transporte de palas. Se prevé la retirada temporal de señalización y la adecuación del espacio de giro."
+      - title: "Punto de interés 2 · Cruce con el vial del polígono"
+        blocks:
+          - p: "Se requiere ensanchar temporalmente el vial en 3 m y retirar el mobiliario urbano afectado."
+      - title: "Restitución"
+        blocks:
+          - p: "Finalizados los transportes, se restituirán todos los elementos afectados a su estado original."
+  - id: access_feasibility
+    blocks:
+      - table:
+          caption: "Cumplimiento de requisitos del fabricante"
+          header: ["Requisito", "Exigido", "Disponible", "Cumple"]
+          rows: [["Radio de giro mínimo", "40 m", "42 m", "Sí"], ["Pendiente máxima", "10 %", "6 %", "Sí"], ["Ancho libre", "5 m", "5,5 m", "Sí"]]
+  - id: conclusions
+    blocks:
+      - callout: {kind: ok, title: "Conclusión:", text: "El acceso es **viable técnicamente** con las actuaciones temporales descritas."}
+  - id: annexes
+    blocks:
+      - p: "Apéndice 1. Informe de *route survey* del transportista (pendiente de incorporar)."
